@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		D000943C2998FADF009E1857 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D000943B2998FADF009E1857 /* AppDelegate.swift */; };
 		D000943E2998FADF009E1857 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D000943D2998FADF009E1857 /* SceneDelegate.swift */; };
-		D00094402998FAE0009E1857 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D000943F2998FAE0009E1857 /* ViewController.swift */; };
-		D00094432998FAE0009E1857 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00094412998FAE0009E1857 /* Main.storyboard */; };
+		D00094402998FAE0009E1857 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D000943F2998FAE0009E1857 /* PhotosViewController.swift */; };
 		D00094452998FAE7009E1857 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00094442998FAE7009E1857 /* Assets.xcassets */; };
 		D00094482998FAE7009E1857 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00094462998FAE7009E1857 /* LaunchScreen.storyboard */; };
 		D00094532998FAE8009E1857 /* PhotoBankAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00094522998FAE8009E1857 /* PhotoBankAppTests.swift */; };
 		D000945D2998FAE8009E1857 /* PhotoBankAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D000945C2998FAE8009E1857 /* PhotoBankAppUITests.swift */; };
 		D000945F2998FAE8009E1857 /* PhotoBankAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D000945E2998FAE8009E1857 /* PhotoBankAppUITestsLaunchTests.swift */; };
+		D000947029990192009E1857 /* PhotosIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D000946F29990192009E1857 /* PhotosIO.swift */; };
+		D00094722999019F009E1857 /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00094712999019F009E1857 /* PhotosViewModel.swift */; };
+		D0009474299901AB009E1857 /* PhotosDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0009473299901AB009E1857 /* PhotosDataProvider.swift */; };
+		D0009476299903C7009E1857 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0009475299903C7009E1857 /* Coordinator.swift */; };
+		D0009478299903D1009E1857 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0009477299903D1009E1857 /* Assembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +43,7 @@
 		D00094382998FADF009E1857 /* PhotoBankApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoBankApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D000943B2998FADF009E1857 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D000943D2998FADF009E1857 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D000943F2998FAE0009E1857 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D00094422998FAE0009E1857 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D000943F2998FAE0009E1857 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		D00094442998FAE7009E1857 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D00094472998FAE7009E1857 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D00094492998FAE7009E1857 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +52,11 @@
 		D00094582998FAE8009E1857 /* PhotoBankAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoBankAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D000945C2998FAE8009E1857 /* PhotoBankAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoBankAppUITests.swift; sourceTree = "<group>"; };
 		D000945E2998FAE8009E1857 /* PhotoBankAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoBankAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D000946F29990192009E1857 /* PhotosIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosIO.swift; sourceTree = "<group>"; };
+		D00094712999019F009E1857 /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
+		D0009473299901AB009E1857 /* PhotosDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosDataProvider.swift; sourceTree = "<group>"; };
+		D0009475299903C7009E1857 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		D0009477299903D1009E1857 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +107,8 @@
 		D000943A2998FADF009E1857 /* PhotoBankApp */ = {
 			isa = PBXGroup;
 			children = (
-				D000943B2998FADF009E1857 /* AppDelegate.swift */,
-				D000943D2998FADF009E1857 /* SceneDelegate.swift */,
-				D000943F2998FAE0009E1857 /* ViewController.swift */,
-				D00094412998FAE0009E1857 /* Main.storyboard */,
-				D00094442998FAE7009E1857 /* Assets.xcassets */,
-				D00094462998FAE7009E1857 /* LaunchScreen.storyboard */,
-				D00094492998FAE7009E1857 /* Info.plist */,
+				D000946D2999016F009E1857 /* Modules */,
+				D000946C2999009A009E1857 /* SupportingFiles */,
 			);
 			path = PhotoBankApp;
 			sourceTree = "<group>";
@@ -125,6 +128,39 @@
 				D000945E2998FAE8009E1857 /* PhotoBankAppUITestsLaunchTests.swift */,
 			);
 			path = PhotoBankAppUITests;
+			sourceTree = "<group>";
+		};
+		D000946C2999009A009E1857 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D000943B2998FADF009E1857 /* AppDelegate.swift */,
+				D000943D2998FADF009E1857 /* SceneDelegate.swift */,
+				D00094462998FAE7009E1857 /* LaunchScreen.storyboard */,
+				D00094442998FAE7009E1857 /* Assets.xcassets */,
+				D00094492998FAE7009E1857 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		D000946D2999016F009E1857 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D0009477299903D1009E1857 /* Assembly.swift */,
+				D0009475299903C7009E1857 /* Coordinator.swift */,
+				D000946E29990177009E1857 /* PhotosModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D000946E29990177009E1857 /* PhotosModule */ = {
+			isa = PBXGroup;
+			children = (
+				D000946F29990192009E1857 /* PhotosIO.swift */,
+				D00094712999019F009E1857 /* PhotosViewModel.swift */,
+				D0009473299901AB009E1857 /* PhotosDataProvider.swift */,
+				D000943F2998FAE0009E1857 /* PhotosViewController.swift */,
+			);
+			path = PhotosModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +269,6 @@
 			files = (
 				D00094482998FAE7009E1857 /* LaunchScreen.storyboard in Resources */,
 				D00094452998FAE7009E1857 /* Assets.xcassets in Resources */,
-				D00094432998FAE0009E1857 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +293,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D00094402998FAE0009E1857 /* ViewController.swift in Sources */,
+				D00094402998FAE0009E1857 /* PhotosViewController.swift in Sources */,
+				D0009478299903D1009E1857 /* Assembly.swift in Sources */,
 				D000943C2998FADF009E1857 /* AppDelegate.swift in Sources */,
+				D00094722999019F009E1857 /* PhotosViewModel.swift in Sources */,
+				D000947029990192009E1857 /* PhotosIO.swift in Sources */,
 				D000943E2998FADF009E1857 /* SceneDelegate.swift in Sources */,
+				D0009474299901AB009E1857 /* PhotosDataProvider.swift in Sources */,
+				D0009476299903C7009E1857 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +337,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D00094412998FAE0009E1857 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D00094422998FAE0009E1857 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D00094462998FAE7009E1857 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -439,10 +471,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2S52Q5VDX5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PhotoBankApp/Info.plist;
+				INFOPLIST_FILE = PhotoBankApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -453,9 +484,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.a.pride.PhotoBankApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -468,10 +502,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2S52Q5VDX5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PhotoBankApp/Info.plist;
+				INFOPLIST_FILE = PhotoBankApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -482,9 +515,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.a.pride.PhotoBankApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
