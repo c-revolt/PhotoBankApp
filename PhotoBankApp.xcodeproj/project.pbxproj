@@ -15,11 +15,15 @@
 		D00094532998FAE8009E1857 /* PhotoBankAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00094522998FAE8009E1857 /* PhotoBankAppTests.swift */; };
 		D000945D2998FAE8009E1857 /* PhotoBankAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D000945C2998FAE8009E1857 /* PhotoBankAppUITests.swift */; };
 		D000945F2998FAE8009E1857 /* PhotoBankAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D000945E2998FAE8009E1857 /* PhotoBankAppUITestsLaunchTests.swift */; };
-		D000947029990192009E1857 /* PhotosIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D000946F29990192009E1857 /* PhotosIO.swift */; };
 		D00094722999019F009E1857 /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00094712999019F009E1857 /* PhotosViewModel.swift */; };
 		D0009474299901AB009E1857 /* PhotosDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0009473299901AB009E1857 /* PhotosDataProvider.swift */; };
 		D0009476299903C7009E1857 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0009475299903C7009E1857 /* Coordinator.swift */; };
 		D0009478299903D1009E1857 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0009477299903D1009E1857 /* Assembly.swift */; };
+		D000947B29990CFC009E1857 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D000947A29990CFC009E1857 /* PhotoCell.swift */; };
+		D008C07929AA22C4007AD78C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D008C07829AA22C4007AD78C /* Constants.swift */; };
+		D008C07C29AA2444007AD78C /* UnsplashPhotoPicker in Frameworks */ = {isa = PBXBuildFile; productRef = D008C07B29AA2444007AD78C /* UnsplashPhotoPicker */; };
+		D037E155299F7D990036CBCC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D037E154299F7D990036CBCC /* NetworkService.swift */; };
+		D037E157299F7DEA0036CBCC /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D037E156299F7DEA0036CBCC /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,11 +56,14 @@
 		D00094582998FAE8009E1857 /* PhotoBankAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoBankAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D000945C2998FAE8009E1857 /* PhotoBankAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoBankAppUITests.swift; sourceTree = "<group>"; };
 		D000945E2998FAE8009E1857 /* PhotoBankAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoBankAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		D000946F29990192009E1857 /* PhotosIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosIO.swift; sourceTree = "<group>"; };
 		D00094712999019F009E1857 /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
 		D0009473299901AB009E1857 /* PhotosDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosDataProvider.swift; sourceTree = "<group>"; };
 		D0009475299903C7009E1857 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		D0009477299903D1009E1857 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
+		D000947A29990CFC009E1857 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		D008C07829AA22C4007AD78C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D037E154299F7D990036CBCC /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		D037E156299F7DEA0036CBCC /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D008C07C29AA2444007AD78C /* UnsplashPhotoPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +143,7 @@
 			children = (
 				D000943B2998FADF009E1857 /* AppDelegate.swift */,
 				D000943D2998FADF009E1857 /* SceneDelegate.swift */,
+				D008C07829AA22C4007AD78C /* Constants.swift */,
 				D00094462998FAE7009E1857 /* LaunchScreen.storyboard */,
 				D00094442998FAE7009E1857 /* Assets.xcassets */,
 				D00094492998FAE7009E1857 /* Info.plist */,
@@ -145,8 +154,10 @@
 		D000946D2999016F009E1857 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D008C07729AA1B4B007AD78C /* Models */,
 				D0009477299903D1009E1857 /* Assembly.swift */,
 				D0009475299903C7009E1857 /* Coordinator.swift */,
+				D037E154299F7D990036CBCC /* NetworkService.swift */,
 				D000946E29990177009E1857 /* PhotosModule */,
 			);
 			path = Modules;
@@ -155,12 +166,28 @@
 		D000946E29990177009E1857 /* PhotosModule */ = {
 			isa = PBXGroup;
 			children = (
-				D000946F29990192009E1857 /* PhotosIO.swift */,
 				D00094712999019F009E1857 /* PhotosViewModel.swift */,
 				D0009473299901AB009E1857 /* PhotosDataProvider.swift */,
 				D000943F2998FAE0009E1857 /* PhotosViewController.swift */,
+				D000947929990CE9009E1857 /* Cell */,
 			);
 			path = PhotosModule;
+			sourceTree = "<group>";
+		};
+		D000947929990CE9009E1857 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D000947A29990CFC009E1857 /* PhotoCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D008C07729AA1B4B007AD78C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D037E156299F7DEA0036CBCC /* Photo.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +206,9 @@
 			dependencies = (
 			);
 			name = PhotoBankApp;
+			packageProductDependencies = (
+				D008C07B29AA2444007AD78C /* UnsplashPhotoPicker */,
+			);
 			productName = PhotoBankApp;
 			productReference = D00094382998FADF009E1857 /* PhotoBankApp.app */;
 			productType = "com.apple.product-type.application";
@@ -251,6 +281,9 @@
 				Base,
 			);
 			mainGroup = D000942F2998FADF009E1857;
+			packageReferences = (
+				D008C07A29AA2443007AD78C /* XCRemoteSwiftPackageReference "unsplash-photopicker-ios" */,
+			);
 			productRefGroup = D00094392998FADF009E1857 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -293,11 +326,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D037E155299F7D990036CBCC /* NetworkService.swift in Sources */,
+				D008C07929AA22C4007AD78C /* Constants.swift in Sources */,
 				D00094402998FAE0009E1857 /* PhotosViewController.swift in Sources */,
 				D0009478299903D1009E1857 /* Assembly.swift in Sources */,
+				D000947B29990CFC009E1857 /* PhotoCell.swift in Sources */,
 				D000943C2998FADF009E1857 /* AppDelegate.swift in Sources */,
 				D00094722999019F009E1857 /* PhotosViewModel.swift in Sources */,
-				D000947029990192009E1857 /* PhotosIO.swift in Sources */,
+				D037E157299F7DEA0036CBCC /* Photo.swift in Sources */,
 				D000943E2998FADF009E1857 /* SceneDelegate.swift in Sources */,
 				D0009474299901AB009E1857 /* PhotosDataProvider.swift in Sources */,
 				D0009476299903C7009E1857 /* Coordinator.swift in Sources */,
@@ -640,6 +676,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D008C07A29AA2443007AD78C /* XCRemoteSwiftPackageReference "unsplash-photopicker-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/unsplash/unsplash-photopicker-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D008C07B29AA2444007AD78C /* UnsplashPhotoPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D008C07A29AA2443007AD78C /* XCRemoteSwiftPackageReference "unsplash-photopicker-ios" */;
+			productName = UnsplashPhotoPicker;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D00094302998FADF009E1857 /* Project object */;
 }

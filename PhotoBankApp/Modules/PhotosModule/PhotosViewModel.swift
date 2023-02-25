@@ -8,23 +8,31 @@
 import Foundation
 
 protocol PhotosViewModelProtocol: AnyObject {
+    init(view: PhotosViewControllerProtocol, networkService: NetworkServiceProtocol, coordinator: CoordinatorProtocol)
+    var photos: [Photo]? { get set }
+    func getData()
     
 }
 
-final class PhotosViewModel {
+final class PhotosViewModel: PhotosViewModelProtocol {
     
     weak var view: PhotosViewControllerProtocol?
-    private weak var output: PhotosOutput?
+    var networkService: NetworkServiceProtocol?
+    var coordinator: CoordinatorProtocol?
+    var photos: [Photo]?
     
-    init(view: PhotosViewControllerProtocol? = nil, output: PhotosOutput? = nil) {
+    init(view: PhotosViewControllerProtocol, networkService: NetworkServiceProtocol, coordinator: CoordinatorProtocol) {
         self.view = view
-        self.output = output
+        self.networkService = networkService
+        self.coordinator = coordinator
+        
+    }
+    
+    func getData() {
+        
     }
     
     
     
 }
 
-extension PhotosViewModel: PhotosViewModelProtocol {
-    
-}

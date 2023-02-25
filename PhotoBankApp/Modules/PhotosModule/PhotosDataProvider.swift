@@ -12,18 +12,34 @@ enum PhotosSection: Int, CaseIterable {
 }
 
 final class PhotosDataProvider: NSObject {
-    var photosDataProvider = PhotosViewModel()
+    private weak var viewModel: PhotosViewModelProtocol?
 }
 
 extension PhotosDataProvider: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        guard let viewModel = viewModel else { fatalError() }
+        return viewModel.photos?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.reusedID, for: indexPath) as? PhotoCell else { return UICollectionViewCell() }
+        
+        cell.backgroundColor = .randome
+        
+        return cell
     }
     
+}
+
+extension PhotosDataProvider: UICollectionViewDelegate {
     
-    
+}
+
+extension UIColor {
+    static var randome: UIColor {
+        return UIColor(red: .random(in: 0.4...1),
+                       green: .random(in: 0.4...1),
+                       blue: .random(in: 0.4...1),
+                       alpha: 1)
+    }
 }

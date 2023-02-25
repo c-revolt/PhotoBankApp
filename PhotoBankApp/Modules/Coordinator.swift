@@ -7,23 +7,37 @@
 
 import UIKit
 
-final class Coordinator {
+
+protocol MainCoordinatorProtocol: AnyObject {
+    var tabBarController: UITabBarController? { get set }
+    var assembly: AssemblyProtocol? { get set }
+}
+
+protocol CoordinatorProtocol: MainCoordinatorProtocol {
+    func start(window: UIWindow)
+}
+
+final class AppCoordinator: CoordinatorProtocol {
     
-    private let assembly: Assembly
-    private let tabBarController = UITabBarController()
+    var tabBarController: UITabBarController?
+    var assembly: AssemblyProtocol?
     
-    init(assembly: Assembly) {
+    init(tabBarController: UITabBarController, assembly: AssemblyProtocol) {
+        self.tabBarController = tabBarController
         self.assembly = assembly
     }
     
     func start(window: UIWindow) {
-        tabBarController.setViewControllers(
-            [
-                UINavigationController(rootViewController: assembly.makePhotos(output: self)),
-                UINavigationController(rootViewController: UIViewController())
-            ],
-            animated: true
-        )
+        if let tabBarController = tabBarController {
+            guard let photosViewController = assembly?.makePhotosModule(coordinator: self) else { return }
+            tabBarController.setViewControllers(
+                [
+                    UINavigationController(rootViewController: photosViewController),
+                    UINavigationController(rootViewController: UIViewController())
+                ],
+                animated: true
+            )
+        }
         
         setupTabBarController()
         window.rootViewController = tabBarController
@@ -33,18 +47,15 @@ final class Coordinator {
     
     private func setupTabBarController() {
         
-        tabBarController.viewControllers?[0].tabBarItem = UITabBarItem(
+        tabBarController?.viewControllers?[0].tabBarItem = UITabBarItem(
             title: "Photos",
-            image: UIImage(systemName: "photo.on.rectangle"),
+            image: UIImage(systemName: "film"),
             tag: 0)
         
-        tabBarController.viewControllers?[1].tabBarItem = UITabBarItem(
+        tabBarController?.viewControllers?[1].tabBarItem = UITabBarItem(
             title: "Favorites",
             image: UIImage(systemName: "heart"),
             tag: 1)
     }
-}
-
-extension Coordinator: PhotosOutput {
     
 }

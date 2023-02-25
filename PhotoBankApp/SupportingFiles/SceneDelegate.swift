@@ -11,7 +11,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     private let assembly = Assembly()
-    private lazy var coordinator = Coordinator(assembly: assembly)
+    private let tabBarController = UITabBarController()
+    private lazy var coordinator = AppCoordinator(tabBarController: tabBarController ,assembly: assembly)
+    //Coordinator(assembly: assembly)
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {

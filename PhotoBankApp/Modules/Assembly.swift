@@ -7,11 +7,17 @@
 
 import UIKit
 
-final class Assembly {
+protocol AssemblyProtocol: AnyObject {
+ 
+    func makePhotosModule(coordinator: CoordinatorProtocol) -> UIViewController
+}
+
+final class Assembly: AssemblyProtocol {
     
-    func makePhotos(output: PhotosOutput) -> UIViewController {
-        let viewModel = PhotosViewModel(output: output)
-        let view = PhotosViewController(viewModel: viewModel)
+    func makePhotosModule(coordinator: CoordinatorProtocol) -> UIViewController {
+        let view = PhotosViewController()
+        let networkService = NetworkService()
+        let viewModel = PhotosViewModel(view: view, networkService: networkService, coordinator: coordinator)
         viewModel.view = view
         
         return view
