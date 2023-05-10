@@ -17,8 +17,9 @@ final class PhotosDataProvider: NSObject {
 
 extension PhotosDataProvider: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let viewModel = viewModel else { fatalError() }
-        return viewModel.photos?.count ?? 0
+//       guard let viewModel = viewModel else { fatalError() }
+//        return viewModel.photos?.count ?? 0
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

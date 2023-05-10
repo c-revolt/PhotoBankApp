@@ -22,8 +22,9 @@
 		D000947B29990CFC009E1857 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D000947A29990CFC009E1857 /* PhotoCell.swift */; };
 		D008C07929AA22C4007AD78C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D008C07829AA22C4007AD78C /* Constants.swift */; };
 		D008C07C29AA2444007AD78C /* UnsplashPhotoPicker in Frameworks */ = {isa = PBXBuildFile; productRef = D008C07B29AA2444007AD78C /* UnsplashPhotoPicker */; };
+		D008C08129AA3C74007AD78C /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D008C08029AA3C74007AD78C /* NetworkDataFetcher.swift */; };
 		D037E155299F7D990036CBCC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D037E154299F7D990036CBCC /* NetworkService.swift */; };
-		D037E157299F7DEA0036CBCC /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D037E156299F7DEA0036CBCC /* Photo.swift */; };
+		D037E157299F7DEA0036CBCC /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D037E156299F7DEA0036CBCC /* SearchResults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +63,9 @@
 		D0009477299903D1009E1857 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 		D000947A29990CFC009E1857 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		D008C07829AA22C4007AD78C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D008C08029AA3C74007AD78C /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		D037E154299F7D990036CBCC /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		D037E156299F7DEA0036CBCC /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		D037E156299F7DEA0036CBCC /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		D000943A2998FADF009E1857 /* PhotoBankApp */ = {
 			isa = PBXGroup;
 			children = (
+				D008C07F29AA3C49007AD78C /* Services */,
 				D000946D2999016F009E1857 /* Modules */,
 				D000946C2999009A009E1857 /* SupportingFiles */,
 			);
@@ -157,7 +160,6 @@
 				D008C07729AA1B4B007AD78C /* Models */,
 				D0009477299903D1009E1857 /* Assembly.swift */,
 				D0009475299903C7009E1857 /* Coordinator.swift */,
-				D037E154299F7D990036CBCC /* NetworkService.swift */,
 				D000946E29990177009E1857 /* PhotosModule */,
 			);
 			path = Modules;
@@ -185,9 +187,18 @@
 		D008C07729AA1B4B007AD78C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D037E156299F7DEA0036CBCC /* Photo.swift */,
+				D037E156299F7DEA0036CBCC /* SearchResults.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D008C07F29AA3C49007AD78C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D037E154299F7D990036CBCC /* NetworkService.swift */,
+				D008C08029AA3C74007AD78C /* NetworkDataFetcher.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D008C08129AA3C74007AD78C /* NetworkDataFetcher.swift in Sources */,
 				D037E155299F7D990036CBCC /* NetworkService.swift in Sources */,
 				D008C07929AA22C4007AD78C /* Constants.swift in Sources */,
 				D00094402998FAE0009E1857 /* PhotosViewController.swift in Sources */,
@@ -333,7 +345,7 @@
 				D000947B29990CFC009E1857 /* PhotoCell.swift in Sources */,
 				D000943C2998FADF009E1857 /* AppDelegate.swift in Sources */,
 				D00094722999019F009E1857 /* PhotosViewModel.swift in Sources */,
-				D037E157299F7DEA0036CBCC /* Photo.swift in Sources */,
+				D037E157299F7DEA0036CBCC /* SearchResults.swift in Sources */,
 				D000943E2998FADF009E1857 /* SceneDelegate.swift in Sources */,
 				D0009474299901AB009E1857 /* PhotosDataProvider.swift in Sources */,
 				D0009476299903C7009E1857 /* Coordinator.swift in Sources */,

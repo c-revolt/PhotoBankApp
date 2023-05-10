@@ -16,8 +16,8 @@ final class Assembly: AssemblyProtocol {
     
     func makePhotosModule(coordinator: CoordinatorProtocol) -> UIViewController {
         let view = PhotosViewController()
-        let networkService = NetworkService()
-        let viewModel = PhotosViewModel(view: view, networkService: networkService, coordinator: coordinator)
+        let networkDataFetcher = NetworkDataFetcher()
+        let viewModel = PhotosViewModel(view: view, networkDataFetcher: networkDataFetcher, coordinator: coordinator)
         viewModel.view = view
         
         return view

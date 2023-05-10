@@ -21,7 +21,6 @@ class PhotosViewController: UIViewController {
     
     // lifecircle
     init(viewModel: PhotosViewModelProtocol? = nil) {
-        
         self.viewModel = viewModel
         
         super.init(nibName: nil, bundle: nil)

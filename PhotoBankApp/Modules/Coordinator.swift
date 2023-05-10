@@ -56,6 +56,8 @@ final class AppCoordinator: CoordinatorProtocol {
             title: "Favorites",
             image: UIImage(systemName: "heart"),
             tag: 1)
+        
+        tabBarController?.tabBar.tintColor = .systemGreen
     }
     
 }
